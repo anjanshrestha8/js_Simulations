@@ -52,3 +52,14 @@ class Box{
         this.borderCollision();
     }
 }
+//Game Loop
+function animate(){
+    c.clearRect(0,0,canvas.width,canvas.height);
+    for(let i=0;i < 10;i++){
+        boxObj.push(new Box());
+        boxObj[i].update();
+    }    
+
+    requestAnimationFrame(animate);
+}
+animate();
